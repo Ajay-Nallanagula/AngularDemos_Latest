@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+.margin10px{
+    margin-left: 10px;
+}
+
+body{
+    /*background-color: currentColor;*/
+    font-size: x-large;
+    font-family: cursive;
+}
+
+hr{
+    visibility: hidden;
+}
+
+.txtColor {
+    /*color: white;*/
+}
+
+.txtHighlighter{
+    background-color: yellowgreen;
+}
+
+.txtWidth{
+    width:50%
+}
+
+.dirSucessClass{
+background-color: blue !important;
+}
+
+.dirFailClass{
+    background-color: chartreuse !important;
+    }

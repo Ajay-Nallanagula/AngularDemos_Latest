@@ -1,0 +1,46 @@
+
+<br>
+<div>
+<input type = 'text' [(ngModel)] = "txtNgModel" >
+<div class= "txtHighlighter">{{txtNgModel}}</div>
+</div>
+   
+<form novalidate (ngSubmit)= "createNewProduct(newEvent)" >
+<div>
+    
+            <div class='form-group'>
+<label>Name:</label>
+<input name ="firstname" class="form-control txtWidth" [(ngModel)] = 'newEvent.name'
+ required maxlength="10" #txtName ="ngModel">
+ <label *ngIf = "txtName.dirty && txtName.invalid" style='color:red'>This is required field</label>
+            </div>
+          
+            <div class='form-group'>
+                    <label>Date:</label>
+                    <input name ="dated" class="form-control txtWidth" [(ngModel)] = 'newEvent.date'>
+                                </div>
+ 
+ <div class='form-group'>
+        <label>Time:</label>
+        <input name ="timed" class="form-control txtWidth" [(ngModel)] = 'newEvent.time'>
+        </div>
+        <div class='form-group'>
+<label>Venue:</label>
+<input [ngModelOptions] = "{standalone: true}" class="form-control txtWidth" [(ngModel)] = 'newEvent.venue'>
+</div>
+<div>
+    <button class="btn btn-primary">Create</button>
+</div>
+        
+</div>
+</form>
+
+<div>                
+<hr>
+<h2 class="txtColor">Upcoming Technology Events</h2>
+<app-event-thumbnail #thumbnail [inputObj] = "getChilData()"></app-event-thumbnail>
+<span style="color:red">{{thumbnail.thumbnailStr}}</span>
+<br>
+<span style="color:red">{{thumbnail.demoReferenceVariable()}}</span>
+</div>
+
